@@ -1,0 +1,63 @@
+img {
+    width: 50%;
+    cursor: zoom-in;
+    padding: 8px;
+    border: solid 1px rgba(0, 0, 0, .07);;
+    background-color: white;
+}
+
+.first{
+   max-width:300px;
+}
+#carrossel1{
+    width: 300px;
+}
+
+#carrossel6{
+    width: 200px;
+}
+#carrossel7{
+    width:300px;
+}
+.clicked {
+    animation: zoomin 200ms ease-in;
+    transform: scale(2.0);
+    position: absolute;
+    left: 300px;
+    margin-left: auto;
+    cursor: zoom-out;
+    @media (max-width: 760px) {
+        left: 30%;
+    }
+}
+
+#overlay {
+    pointer-events: auto; /* Allow clicks on overlay when active */
+}
+.overlay-active {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    backdrop-filter: blur(100px); /* Apply blur effect */
+    z-index: 998; /* Below the zoomed image */
+    overflow: hidden; /* Prevent scrolling when overlay is active */
+    pointer-events: none; /* Allow clicks to pass through the overlay to underlying elements */
+}
+
+
+@keyframes zoomin {
+    from {
+        transform: scale(1.0);
+    }
+    to {
+        transform: scale(2.0);
+
+    }
+}
+
+@keyframes zoomout {
+    from {
+        transform: scale(2.0);
+    }
+    to {
+        transform: scale(1.0);
+    }
+}
