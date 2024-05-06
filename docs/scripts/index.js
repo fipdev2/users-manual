@@ -1,4 +1,7 @@
 function zoomOut(id) {
+    let images = document.getElementsByTagName("img");
+    let imgArray = [...images];
+    imgArray.map(image => image.style.cursor = "zoom-in")
     let image = document.getElementById(id);
     image.style.animation = "zoomout 200ms ease-out";
     setTimeout(() => {
@@ -24,7 +27,7 @@ function handleZoomInZoomOut(id) {
         image.classList.remove("clicked");
         document.body.removeEventListener("click", handleZoomOut);
         if (!clickedImages.length) {
-            imgArray.map(image => image.style.cursor = "zoom-in")
+
             zoomOut(id);
         }
     }
@@ -35,14 +38,7 @@ function handleZoomOut(event) {
 
     if (!image.contains(event.target)) {
         image.classList.remove("clicked");
-        image.style.animation = "zoomout 200ms ease-out";
-        setTimeout(() => {
-            image.style.animation = "";
-        }, 200);
-
-        let clickedImages = document.getElementsByTagName("img");
-        let images = [...clickedImages]
-        images.map(image => image.style.cursor = "zoom-in")
+        zoomOut(image.id);
 
         document.body.removeEventListener("click", handleZoomOut);
     }

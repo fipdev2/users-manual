@@ -9,6 +9,16 @@ img {
 .first{
    max-width:300px;
 }
+#carrossel1{
+    width: 300px;
+}
+
+#carrossel6{
+    width: 200px;
+}
+#carrossel7{
+    width:300px;
+}
 .clicked {
     animation: zoomin 200ms ease-in;
     transform: scale(2.0);
