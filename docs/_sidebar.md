@@ -3,3 +3,7 @@
 [Início](/)
 * 
 [Notícias](noticias)
+*
+[Carrossel](carrossel)
+*
+[Deliberações](deliberacoes)
