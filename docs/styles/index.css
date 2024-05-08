@@ -6,24 +6,35 @@ img {
     background-color: white;
 }
 
-.first{
-   max-width:300px;
+.first {
+    max-width: 300px;
 }
-#carrossel1{
+
+#carrossel1 {
     width: 300px;
 }
 
-#carrossel6{
+#carrossel6 {
     width: 200px;
 }
-#carrossel7{
-    width:300px;
+
+#carrossel7 {
+    width: 300px;
 }
+
+.menu {
+    width: 300px;
+}
+
+.mini {
+    width: 200px;
+}
+
 .clicked {
     animation: zoomin 200ms ease-in;
     transform: scale(2.0);
     position: absolute;
-    left: 300px;
+
     margin-left: auto;
     cursor: zoom-out;
     @media (max-width: 760px) {
@@ -31,17 +42,27 @@ img {
     }
 }
 
-#overlay {
-    pointer-events: auto; /* Allow clicks on overlay when active */
-}
 .overlay-active {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    animation: overlay 200ms ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
     backdrop-filter: blur(100px); /* Apply blur effect */
     z-index: 998; /* Below the zoomed image */
     overflow: hidden; /* Prevent scrolling when overlay is active */
-    pointer-events: none; /* Allow clicks to pass through the overlay to underlying elements */
 }
 
+/*.sidebar{
+    width:0;
+}*/
 
 @keyframes zoomin {
     from {
@@ -59,5 +80,22 @@ img {
     }
     to {
         transform: scale(1.0);
+    }
+}
+
+@keyframes overlay {
+    from {
+        background-color:transparent;
+    }
+    to {
+        background: rgba(0, 0, 0, 0.8)
+    }
+}
+@keyframes overlay-out {
+    from {
+        background: rgba(0, 0, 0, 0.6)
+    }
+    to {
+        background-color:transparent;
     }
 }

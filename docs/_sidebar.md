@@ -7,3 +7,7 @@
 [Carrossel](carrossel)
 *
 [Deliberações](deliberacoes)
+*
+[Portarias](portarias)
+*
+[Resoluções](resolucoes)

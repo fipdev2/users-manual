@@ -17,18 +17,21 @@ Para acessar o módulo de deliberações vá no seu menu lateral esquerdo e cliq
 
 <br>
 <br>
+
 Você vai se deparar com o seguinte página, em seguida clique em **"Nova deliberação"**
-<br>
+
 <br>
 
 <img src ='images%2Fnova-deliberacao.png' id="2" onclick="handleZoomInZoomOut(this.id)">
 
 <br>
 <br>
+
 Você será redirecionado para a página de criação de uma nova deliberação. Preencha os campos obrigatórios normalmente,
 são eles: **Número, Tipo, Data, Publicado no DOERJ em, Conessionária, Descrição, Arquivo**
 <br>Ao terminar de preencher o formulário, clique no botão **Salvar** ao final da
 página. Este pode ser visto abaixo.
+
 <br>
 <br>
 
