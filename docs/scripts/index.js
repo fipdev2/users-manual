@@ -1,9 +1,10 @@
 function zoomOut(id) {
-    let images = document.getElementsByTagName("img");
-    let imgArray = [...images];
-    imgArray.map(image => image.style.cursor = "zoom-in")
     let image = document.getElementById(id);
+    let overlay = document.getElementById('overlay');
+
     image.style.animation = "zoomout 200ms ease-out";
+    overlay.parentNode.insertBefore(image, overlay);
+    overlay.parentNode.removeChild(overlay);
     setTimeout(() => {
         image.style.animation = "";
     }, 200);
@@ -15,12 +16,16 @@ function handleZoomInZoomOut(id) {
     let clickedImages = document.getElementsByClassName("clicked");
     let imgArray = [...images];
 
+    const sidebar = document.querySelector('.sidebar');
+
     if (!clickedImages.length) {
         image.classList.add("clicked");
-        imgArray.map((image) => {
-            image.style.cursor = "not-allowed"
-        })
-        image.style.cursor = "zoom-out";
+        let overlay = document.createElement('div');
+        overlay.classList.add("overlay-active");
+        overlay.id = "overlay";
+        image.parentNode.insertBefore(overlay, image);
+        overlay.appendChild(image);
+
         document.body.addEventListener("click", handleZoomOut);
         document.body.addEventListener("keydown", handleKeyDown);
     } else {
@@ -32,6 +37,7 @@ function handleZoomInZoomOut(id) {
         }
     }
 }
+
 
 function handleZoomOut(event) {
     let image = document.querySelector(".clicked");

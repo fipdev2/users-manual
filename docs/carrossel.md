@@ -11,7 +11,7 @@ carrossel.
 <br>A funcionalidade carrossel pode ser acessada no menu lateral esquerdo na opção <b>"Carrossel"</b>, assim como na figura abaixo.
 <br>
 
-<img src="images/carrossel.png" id="carrossel-1" onclick="handleZoomInZoomOut(this.id)">
+<img src="images/carrossel.png" id="carrossel-1" onclick="handleZoomInZoomOut(this.id)" class="menu">
 
 <br>
 <br>
